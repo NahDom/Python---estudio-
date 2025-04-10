@@ -10,19 +10,19 @@ print(mensaje)
 
 # Ejercicio 1
 
-amigos = ['negro', 'foco', 'mas negro']
+amigos = ['alana', 'foco', 'pato']
 
 print(amigos[0])
 print(amigos[1])
 print(amigos[2])
 
-saludos = ['Te odio', 'que trolo eres', 'marik on']
+saludos = ['kjj', 'ola', 'ciao']
 
 print(saludos[0],amigos[0])
 print(saludos[1],amigos[1])
 print(saludos[2],amigos[2])
 
-amigos.append('drogadicto')
+amigos.append('no tengo mas xD')
 print(amigos)
 
 # metodo insert -> inserta elementos en la lista al principio de todo, mas no reemplaza el primero original
@@ -55,26 +55,26 @@ print(motos)
 
 invitados = ['juliana', 'denise', 'mauri', 'ferra', 'lautaro']
 
-message = 'Te invito a mi primera hiperinflacion :D'
+message = 'Te invito a mi primera cena'
 
 print(f"{message}, {invitados[0].title()}")
 print(f"{message}, {invitados[1].title()}")
 print(f"{message}, {invitados[2].title()}")
 print(f"{message}, {invitados[3].title()}")
 print(f"{message}, {invitados[4].title()}")
-print(f"\n lastimosamente el invitado {invitados[2].title()}, no podra asistir a la hiper, asi que en su lugar invito a otro negro.")
+print(f"\n lastimosamente el invitado {invitados[2].title()}, no podra asistir a la cena, asi que en su lugar invito a otro negro.")
 print(f"\n")
 invitados.remove('mauri')
 # meto a otra persona la lista con el metodo insert
 invitados.insert(2, 'Carlos')
-message = 'Te invito a mi primera hiperinflacion :D'
+message = 'Te invito a mi primera cena :D'
 
 print(f"{message}, {invitados[0].title()}")
 print(f"{message}, {invitados[1].title()}")
 print(f"{message}, {invitados[2].title()}")
 print(f"{message}, {invitados[3].title()}")
 print(f"{message}, {invitados[4].title()}")
-print(f"encontre una mesa mas grande, por lo tanto puedo invitar mas gente a la hiperinflacion de venezuela.")
+print(f"encontre una mesa mas grande, por lo tanto puedo invitar mas gente a la cena.")
 invitados.insert(0,'tralalero tralala')
 invitados.insert(3,'vaca saturna saturnita')
 invitados.append('tung tung tung shakur')
@@ -108,7 +108,7 @@ print(f"\n")
 print(f"Pero si hay lugar para ustedes dos {invitados[1].title()} y {invitados[0].title()}")
 
 print(f"\n")
-print(f"Me enoje los odio asi que los borro")
+print(f"ya no hay asi que los borro")
 del invitados[0]
 # Como es en tiempo de compilacion el metodo del lista[], convierte los elementos de la lista en concurrentes, de modo que si borraste el primero el segundo se convierte en el primero y asi sucesivamente
 del invitados[0]
