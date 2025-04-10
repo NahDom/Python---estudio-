@@ -1,1 +1,6 @@
-Generalmente lo mejor para ir mejorando es algun que otro ejercicio de estructuras de datos aplicadas, algun pequeño proyecto a realizar o juegos para afinar el uso de las estructuras de datos cada vez mas complejas, es por eso que en este documento plasmo todo aquella idea o proyecto a realizar que haga en EDA, mas no los proyectos avanzados
+Generalmente lo mejor para ir mejorando 
+es algun que otro ejercicio de estructuras de datos aplicadas, 
+algun pequeño proyecto a realizar o 
+juegos para afinar el uso de las estructuras de datos cada vez mas complejas, 
+es por eso que en este documento plasmo todo aquella idea 
+o proyecto a realizar que haga en EDA, mas no los proyectos avanzados
