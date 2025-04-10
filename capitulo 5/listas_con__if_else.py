@@ -52,4 +52,4 @@ for numero in range(len(numeros)):
         resultado.append(f"{numeros[numero]}{terminacion[numero]}")
         
 print(" ".join(resultado)) #join metodo de cadenas
-
+#test
