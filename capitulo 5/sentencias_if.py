@@ -1,13 +1,13 @@
 # Ejercicios con IF ELIF ELSE
 import random 
-cars = ['toyota', 'bmw', 'bbw', 'honda']
+cars = ['toyota', 'bmw', 'bOw', 'honda']
 for car in cars:
     if car == 'bbw':
         print(car.upper())
     else:
         print(car.title())
     
-var = 'ACM1PT'
+var = 'ASADAF'
 print(var[::-1].lower()) 
 
 edad = 19
