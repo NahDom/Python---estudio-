@@ -2,7 +2,7 @@
 import random 
 cars = ['toyota', 'bmw', 'bOw', 'honda']
 for car in cars:
-    if car == 'bbw':
+    if car == 'bmw':
         print(car.upper())
     else:
         print(car.title())
