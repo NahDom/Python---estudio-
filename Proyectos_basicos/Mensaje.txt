@@ -1,6 +1,4 @@
-Generalmente lo mejor para ir mejorando 
-es algun que otro ejercicio de estructuras de datos aplicadas, 
-algun pequeño proyecto a realizar o 
-juegos para afinar el uso de las estructuras de datos cada vez mas complejas, 
-es por eso que en este documento plasmo todo aquella idea 
-o proyecto a realizar que haga en EDA, mas no los proyectos avanzados
+Bienvenido a la carpeta de proyectos variados que eh realizado en este tiempo
+aqui solo encontrara proyectos que eh tratado de realizar con el tiempo (debido a diversas situaciones)
+y otros que eh logrado terminar y eh de tener el orgullo de poder mostrar y demostrar las capacidades de python
+

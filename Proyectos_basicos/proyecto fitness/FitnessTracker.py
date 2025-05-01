@@ -107,6 +107,7 @@ class FitTrack(QWidget):
         self.borrar.clicked.connect(self.delete)
         self.boton_enviar.clicked.connect(self.calculate)
         self.limpiar.clicked.connect(self.reset)
+    
     # Load tables
     def load_table(self):
         self.table.setRowCount(0)
