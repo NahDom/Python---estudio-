@@ -78,3 +78,14 @@ for pi_or in pizza_amigo:
 
 pizza_amigo.append('chicago')
 print(pizza_amigo)
+
+
+a = [1,2,3,4,5,6,7,8,9]
+b = []
+
+for number in a:
+    if number % 3:
+        #recuerda que es el iterable quien se va al bucle no el iterador
+        b.append(number)
+
+print(b)
