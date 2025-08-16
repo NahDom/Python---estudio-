@@ -15,3 +15,15 @@ for pizza in pizzas:
     
 print("\nDe hecho este libro de python es el mejor!")
 
+lista = []
+lista2 = [1,2,3,4,5,6,7,8,9,10]
+
+for numero in lista2:
+    if numero / 2:
+            lista.append(numero)
+    else:
+          pass
+    
+print(lista)
+
+# para pasar un elemento en un for era el elemento que se itera en el iterable

@@ -26,3 +26,36 @@ print(mydict.keys())
 # popitem() elimina el ultimo elemento del diccionario
 # dict.update(<obj>) --> en este caso update(diccionario_nombre)
 # este metodo lo que hace es hacer MERGE de un diccionario con otro, primeramente debe verificar que la clave del primer diccionario se encuentre en el segundo si esta presente solamente actualiza el valor del primero por el valor que tenga el segundo y de no encontrarse un valor en alguno, todo valor es actualizado en el diccionario de salida 
+
+# d2 = {'b': 300, 'z': 40}
+# print(mydict.update(d2))
+# print(mydict)
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}
+
+for name in sorted(favorite_languages):
+    print(f"{name.title()} gracias por participar")
+
+
+frutas = ["manzana", "banana", "cereza"]
+# por medio de enumerate(lista) puedo obtener el indice de cada elemento
+for indice, fruta in enumerate(frutas):
+    print(f"Índice {indice}: {fruta}")
+
+# pero si quiero todos los valores puedo usar la funcion values()
+
+for valor in favorite_languages.values():
+    print(valor.title())
+
+# para omitir un conjunto repetido puedo convertirlo a set por medio de la funcion set en un iterable de tipo diccionario, porque python identifica los valores unicos de una coleccion
+
+for language in set(favorite_languages.values()):
+    print(language.title())
+
+language_1 = favorite_languages['sarah'].title() #realmente lo que estamos haciendo es el acceso al valor por medio de la clave
+print(f"El lenguaje de Sarah es : {language_1}")
