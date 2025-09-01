@@ -1,7 +1,7 @@
-# si quiero definir el diccionario vacio 
-# diccionario_nombre = {}
-# el elemento es accedido por medio del --> []
-# print(f"disparaste al alien de color {new_color}")
-# dictionary[clave] = valor
-# alien['x_position'] = 0
-# alien['y_position'] = 25
+b = dict()
+
+for x in range(1, 20):
+    # accedo al valor posicional del elemento del valor por medio del b[]
+    b[x] = x ** 2 
+
+print(b)

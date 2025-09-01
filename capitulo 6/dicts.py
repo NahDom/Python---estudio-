@@ -31,6 +31,14 @@ print(mydict.keys())
 # print(mydict.update(d2))
 # print(mydict)
 
+
+frutas = ["manzana", "banana", "cereza"]
+# por medio de enumerate(lista) puedo obtener el indice de cada elemento
+for indice, fruta in enumerate(frutas):
+    print(f"Índice {indice}: {fruta}")
+
+# pero si quiero todos los valores puedo usar la funcion values()
+
 favorite_languages = {
     'jen': 'python',
     'sarah': 'c',
@@ -39,15 +47,8 @@ favorite_languages = {
 }
 
 for name in sorted(favorite_languages):
-    print(f"{name.title()} gracias por participar")
+    print(f"{name.title()}, gracias por participar")
 
-
-frutas = ["manzana", "banana", "cereza"]
-# por medio de enumerate(lista) puedo obtener el indice de cada elemento
-for indice, fruta in enumerate(frutas):
-    print(f"Índice {indice}: {fruta}")
-
-# pero si quiero todos los valores puedo usar la funcion values()
 
 for valor in favorite_languages.values():
     print(valor.title())
@@ -59,3 +60,31 @@ for language in set(favorite_languages.values()):
 
 language_1 = favorite_languages['sarah'].title() #realmente lo que estamos haciendo es el acceso al valor por medio de la clave
 print(f"El lenguaje de Sarah es : {language_1}")
+
+""" Ejercicios """
+user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
+
+for rico in user_0.values():
+    print(rico)
+
+for rico in user_0.keys():
+    print(rico)
+
+"""
+    La forma de crear un diccionario vacío en Python puede ser con dict() o con {}.
+    Un diccionario almacena pares clave:valor. Por ejemplo: {"a": 1, "b": 2}.
+    Un diccionario vacío no contiene nada, pero podemos llenarlo con asignaciones,
+    ya sea manualmente o dentro de un bucle, como for x in range(...).
+"""
+
+b = dict()
+#otra forma es con el elemento --> {}
+for x in range(1, 20):
+    # accedo al valor posicional del elemento del valor por medio del b[]
+    b[x] = x ** 2 
+
+print(b)
