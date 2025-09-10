@@ -1,7 +1,9 @@
-b = dict()
+user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
 
-for x in range(1, 20):
-    # accedo al valor posicional del elemento del valor por medio del b[]
-    b[x] = x ** 2 
-
-print(b)
+# debiera tener el mismo comportamiento que el siguiente codigo:
+for name in user_0:
+    print(name.title())

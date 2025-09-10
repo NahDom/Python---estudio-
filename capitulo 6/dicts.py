@@ -63,13 +63,13 @@ print(f"El lenguaje de Sarah es : {language_1}")
 
 """ Ejercicios """
 user_0 = {
-'username': 'efermi',
-'first': 'enrico',
-'last': 'fermi',
+    'username': 'efermi',
+    'first': 'enrico',
+    'last': 'fermi',
 }
 
 for rico in user_0.values():
-    print(rico)
+    print(rico) 
 
 for rico in user_0.keys():
     print(rico)
@@ -88,3 +88,33 @@ for x in range(1, 20):
     b[x] = x ** 2 
 
 print(b)
+
+""" y si quiero ver todo lo que hay en un diccionario? """
+user_0 = {
+'username': 'efermi',
+'first': 'enrico',
+'last': 'fermi',
+}
+
+"""Los siguientes bloques de codigo tienen el mismo comportamiento"""
+for name in user_0:
+    print(name.title())
+for name in user_0.keys():
+    print(name.title())
+
+for key, value in user_0.items(): # recuerda que siempre es clave: valor
+                                  # Por lo que la forma de recorrido siempre sera la misma en caso de necesitar dichos valores
+    print(f"\nkey: {key}")
+    print(f"\nvalue: {value}")
+
+""" siempre usar un nombre descriptivo para las variables"""
+
+data = {
+    'nombre': 'nahuel'
+}
+
+for clave, valor in data.items():
+    print(f"\nclave: {clave}")
+    print(f"\nvalor: {valor}")
+    
+
