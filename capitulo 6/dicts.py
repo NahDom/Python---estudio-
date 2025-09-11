@@ -96,7 +96,10 @@ user_0 = {
 'last': 'fermi',
 }
 
-"""Los siguientes bloques de codigo tienen el mismo comportamiento"""
+"""
+    Los siguientes bloques de codigo tienen el mismo comportamiento
+    lo unico que los hace unicos por decirlo de alguna manera
+"""
 for name in user_0:
     print(name.title())
 for name in user_0.keys():
@@ -118,3 +121,22 @@ for clave, valor in data.items():
     print(f"\nvalor: {valor}")
     
 
+# Por ejemplo ahora quiero ver una clave concreta siempre que coincida 
+# con una condicion que yo le entrego previamente
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}
+
+amigos = ['jen', 'edward']
+for nombre in favorite_languages.keys():
+    print(f"Hi {nombre.title()}")
+    if nombre in amigos:
+        lenguaje = favorite_languages[nombre].title()
+        # lo que hace es por medio de la clave acceder al valor
+        # por medio de la sentencia dict[key] la cual accede al valor
+        # de la clave en este caso los lenguajes favoritos de cada persona
+        print(f"\n{nombre.title()}, Veo que te gusta {lenguaje}!!!")

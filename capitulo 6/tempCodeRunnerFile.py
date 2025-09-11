@@ -1,9 +1,16 @@
-user_0 = {
-'username': 'efermi',
-'first': 'enrico',
-'last': 'fermi',
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
 }
 
-# debiera tener el mismo comportamiento que el siguiente codigo:
-for name in user_0:
-    print(name.title())
+amigos = ['jen', 'edward']
+for nombre in favorite_languages.keys():
+    print(f"Hi {nombre.title()}")
+    if nombre in amigos:
+        lenguaje = favorite_languages[nombre].title()
+        # lo que hace es por medio de la clave acceder al valor
+        # por medio de la sentencia dict[key] la cual accede al valor
+        # de la clave en este caso los lenguajes favoritos de cada persona
+        print(f"\n{nombre.title()}, Veo que te gusta {lenguaje}!!!")
