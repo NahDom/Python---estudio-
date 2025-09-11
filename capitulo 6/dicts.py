@@ -164,7 +164,43 @@ favorite_languages = {
     'edward': 'rust',
     'phil': 'python',
 }
-
+# recordando a la estructura de datos tipo conjunto: SET() como una estructura de objetos la cual es mutable y no permite repetidos
+# lo cual en el analisis de millones de datos puede ser muy util para hacer identificacion de elementos unicos
 print("Los siguientes lenguajes fueron mencionados: \t ")
-for language in favorite_languages.values():
+for language in set(favorite_languages.values()):
     print(f"\t {language.title()}")
+    
+glosario = {
+    'python': 'el mejor que hay',
+    'python': 'tambien de los mas especializados en OOP',
+    'python': 'blah bla blah',
+    'python': 'blah bla blah',
+    'python': 'blah bla blah',
+    'javascript': 'el mas raro de todos los que hay',
+    'java':'a veces te preguntas como siguen funcionando...'
+}
+
+for lenguaje, definicion in set(glosario.items()):
+    print(f"\n {lenguaje.title()}")
+    print(f"\n {definicion.title()}")
+    
+rios = {
+    'parana': 'argentina',
+    'nilo': 'egipto',
+    'amazonas': 'brasil'
+}
+for rio in rios.values():
+    print(f"Los paises son {rio.title()}")
+print("\t")
+for rio in rios.keys():
+    print(f"Los rios son {rio.title()}")
+print("\t")
+for rio, pais in rios.items():
+    print(f"El rio {rio.title()} pasa por el pais {pais.title()}")
+    
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}

@@ -1,11 +1,13 @@
-
-favorite_languages = {
-    'jen': 'python',
-    'sarah': 'c',
-    'edward': 'rust',
-    'phil': 'python',
+rios = {
+    'parana': 'argentina',
+    'nilo': 'egipto',
+    'amazonas': 'brasil'
 }
-
-print("Los siguientes lenguajes fueron mencionados: \t ")
-for language in favorite_languages.values():
-    print(f"\t {language.title()}")
+for rio in rios.values():
+    print(f"Los paises son {rio.title()}")
+print("\t")
+for rio in rios.keys():
+    print(f"Los rios son {rio.title()}")
+print("\t")
+for rio, pais in rios.items():
+    print(f"El rio {rio.title()} pasa por el pais {pais.title()}")
