@@ -105,8 +105,9 @@ for name in user_0:
 for name in user_0.keys():
     print(name.title())
 
-for key, value in user_0.items(): # recuerda que siempre es clave: valor
-                                  # Por lo que la forma de recorrido siempre sera la misma en caso de necesitar dichos valores
+for key, value in user_0.items(): 
+    # recuerda que siempre es clave: valor 
+    # Por lo que la forma de recorrido siempre sera la misma en caso de necesitar dichos valores
     print(f"\nkey: {key}")
     print(f"\nvalue: {value}")
 
@@ -140,3 +141,30 @@ for nombre in favorite_languages.keys():
         # por medio de la sentencia dict[key] la cual accede al valor
         # de la clave en este caso los lenguajes favoritos de cada persona
         print(f"\n{nombre.title()}, Veo que te gusta {lenguaje}!!!")
+        
+# en este caso quiero que me devuelva una lista ordenada de elementos
+# del diccionario, lo hago por medio de ordenar los valores de la clave
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}
+
+for name in sorted(favorite_languages.keys()):
+    print(f"{name.title()}, gracias por responder la encuesta")
+    
+
+# ahora solo quiero que me sea devuelto los valores de los elementos dentro del diccionario
+
+favorite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python',
+}
+
+print("Los siguientes lenguajes fueron mencionados: \t ")
+for language in favorite_languages.values():
+    print(f"\t {language.title()}")
