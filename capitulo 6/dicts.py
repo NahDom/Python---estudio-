@@ -294,3 +294,67 @@ for name, languages in favorite_languages.items():
         print(f"\n {name.title()} tu lenguaje favorito es: ")
         for language in languages:
             print(f"\t {language.title()}")
+            
+
+# Diccionario de diccionarios
+
+users = {
+    'nadom':{
+        'first': 'nahuel',
+        'last': 'dominguez',
+        'location': 'corrientes'
+    },
+    'jsaez':{
+        'first': 'juliana',
+        'last': 'saez',
+        'location': 'resistencia'
+    }
+}
+
+# realizo un bucle for para pasar por el diccionario y acceder al 
+# diccionario interno que contiene los datos del usuario
+
+for username, info in users.items():
+    print(f"\n Username: {username}")
+    # datos de los usuarios
+    full_name = (f"{info['first']} {info['last']}")
+    location = info['location']
+    print(f"\t Nombre de usuario: {full_name.title()}")
+    print(f"\t Ciudad: {location.title()}")
+    
+mascotas = {
+    'rogelio':{
+        'animal': 'perico',
+        'dueño': 'sebastian'
+    },
+    'toto':{
+        'animal': 'perro',
+        'dueño': 'nahuel'
+    }
+}
+for nombre, datos in mascotas.items():
+    print(f"Nombre de la mascota: {nombre.title()}")
+    data_mascota = datos['animal']
+    dueño = datos['dueño']
+    print(f"\t Tipo de mascota:  {data_mascota.title()}")
+    print(f"\t Dueño de la mascota:  {dueño.title()}")
+    
+    
+favorite_numbers = {
+    'jen': [1,2],
+    'sarah': [3],
+    'edward': [4,5],
+    'phil': [6,7]
+}
+
+for name, numbers in favorite_numbers.items():
+    if len(numbers) > 1:
+    # la unica forma de acceder a los valores completos ya que esto es una lista de elementos en cada clave de nombres, lo que ocurre aqui
+    # es que el segundo elemento que va a tener el valor de los valores, es quien va a ser recorrido en un for interno por ser una lista
+        print(f"\n {name.title()} tus numeros favoritos son: ")
+        for number in numbers:
+            print(f"\t {number}")
+    else:
+        print(f"\n {name.title()} tu numero favorito es: ")
+        for number in numbers:
+            print(f"\t {number}")
