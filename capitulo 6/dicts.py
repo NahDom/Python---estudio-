@@ -251,3 +251,24 @@ for alien_numero in range(30):
     # quiero mostrar cuandos aliens fueron creados
     
     print(f" Numero total de aliens generados {len(aliens)}")
+    
+# Una lista en un diccionario
+
+# por ejemplo una pizzeria
+
+pizza = {
+    'corteza': 'crujiente',
+    'ingredientes': ['queso mozzarella','aceitunas','pollo']
+}
+
+# resumen del pedido
+
+print(f"Ordenaste una pizza {pizza['corteza']}")
+
+print("A la misma puede añadirle: ")
+
+# recorro la lista de los ingredientes extras de la pizza:
+# al acceder a la clave puedo constantemente iterar sobre cada valor
+# lo cual me facilita mostrarlos
+for ingrediente in pizza['ingredientes']:
+    print(f"\t"+ ingrediente)
