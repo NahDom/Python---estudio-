@@ -361,6 +361,14 @@ for name, numbers in favorite_numbers.items():
             
 data = {
     'alumno': 'nahuel',
+    'edad': 25,
+    'alumno': 'juliana',
+    'edad': 25,
+    'alumno': 'sandra',
+    'edad': 25,
+    'alumno': 'juan',
+    'edad': 25,
+    'alumno': 'enrqiue',
     'edad': 25
 }
 
@@ -369,3 +377,33 @@ for nombre, edad in data.items():
     print(f"La edad del alumno es {data['edad']}")
     
     # bueno descubri que el for de python es por fuerza bruta, tantas iteraciones como elementos clave valor haya en el diccionario
+    # bueno tambien que python tiene una regla bastante curiosa, 
+    # si hay literalmente valores repetidos en el diccionario el tipo de salida sera el ultimo es decir que sera el ultimo valor que ingrese por lo que si tengo un mismo valor siempre sera el ultimo 
+
+# para una mejor correccion deberia de hacer una lista de alumnos y sus edades DENTRO del diccionario
+
+data = {
+    'alumno': ['nahuel','juliana','romina','enrqiue'],
+    'edad':[25,18,22,35]
+}
+
+print("RECORRIDO INCORRECTO")
+print("====================")
+for key, value in data.items():
+    print(f"el nombre del alumno es {key.title()}")
+    print(f"la edad del alumno es {value}")
+    
+# bueno para lo que estoy queriendo hacer deberia hacer un uso mas aferrimo a la funciones de python
+# en este caso debo recorrer un par por cada clave, es decir un par de cada clave : valor por ende puedo usar ZIP para hacerlo y crear conjunto de pares para cada uno
+"""
+    zip es una función muy útil en Python que te permite emparejar elementos de varias listas en paralelo. Es como cerrar un cierre (zipper): junta los elementos que están en la misma posición de cada lista
+
+"""
+data = {
+    'alumno': ['nahuel','juliana','romina','enrqiue'],
+    'edad':[25,18,22,35]
+}
+print("SALIDA MAS LIMPIA Y CORRECTA EN PARES")
+print("=====================================")
+for nombre, edad in zip(data['alumno'], data['edad']):
+    print(f"el nombre del alumno es {nombre.title()}, y la edad es {edad} ")

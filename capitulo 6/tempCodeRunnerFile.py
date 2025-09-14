@@ -1,8 +1,12 @@
+
 data = {
-    'alumno': 'nahuel',
-    'edad': 25
+    'alumno': ['nahuel','juliana','romina','enrqiue'],
+    'edad':[25,18,22,35]
 }
 
-for nombre, edad in data.items():
-    print(f"El nombre del alumno es {nombre.title()}")
-    print(f"La edad del alumno es {edad}")
+print("RECORRIDO INCORRECTO")
+print("====================")
+for key, value in data.items():
+    print(f"el nombre del alumno es {key.title()}")
+    print(f"la edad del alumno es {value}")
+    
