@@ -358,3 +358,14 @@ for name, numbers in favorite_numbers.items():
         print(f"\n {name.title()} tu numero favorito es: ")
         for number in numbers:
             print(f"\t {number}")
+            
+data = {
+    'alumno': 'nahuel',
+    'edad': 25
+}
+
+for nombre, edad in data.items():
+    print(f"El nombre del alumno es {data['alumno'].title()}")
+    print(f"La edad del alumno es {data['edad']}")
+    
+    # bueno descubri que el for de python es por fuerza bruta, tantas iteraciones como elementos clave valor haya en el diccionario
