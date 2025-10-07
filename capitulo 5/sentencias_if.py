@@ -1,5 +1,5 @@
 # Ejercicios con IF ELIF ELSE
-import random 
+
 cars = ['toyota', 'bmw', 'bOw', 'honda']
 for car in cars:
     if car == 'bmw':
