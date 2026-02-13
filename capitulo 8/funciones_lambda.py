@@ -10,13 +10,17 @@ def saludo(username):
     
 saludo("Nahuel")
 
+"""libros"""
 def libro(libro):
     print(f"Uno de mis libros favoritos es {libro}")
     
 libro("Gente Ansiosa")
 
+# Funciones con argumentos posicionales
+"""Nombre de mascotas"""
 def describe_mascot(animal, name):
     print(f"\nI have an {animal}")
     print(f"My {animal}'s name is {name.title()}")
     
 describe_mascot("Dog", "Toto")
+
