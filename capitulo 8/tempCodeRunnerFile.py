@@ -1,8 +1,11 @@
+"""devolver una estructura de datos mas compleja"""
 
 def build_person(first, last, age= None):
     # devolver un diccionario con datos de la persona mas la edad
-    datos = {'Nombre': first, 'Apellido': last, 'edad': age}
+    datos = {'Nombre': first, 'Apellido': last}
+    if age:
+        datos['edad'] = age
     return datos
 
-print(build_person('Nahuel', 'Dominguez', 999))
+print(build_person('Nahuel', 'Dominguez'))
 print(build_person('Nahuel', 'Dominguez', age=999))
