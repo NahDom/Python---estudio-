@@ -1,7 +1,7 @@
 """definicion de clases"""
 
 class Dispositivo:
-    # metodo constructor
+    # metodo constructor para inicializar las variables de una clase
     def __init__(self, IP):
         self.IP =  IP
         self.encendido = False

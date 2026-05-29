@@ -13,6 +13,7 @@ while True:
     """ 
     Debo de tener cuidado mucho cuidado cuando sea un ingreso invertido, si yo tengo que la entrada es DISTINTA A LO QUE DEBE HACER SALIR estare saliendo de la ejecucion eternamente.
     siempre debe ser un Si condicion = salida Entonces Fin, porque al hacerlo al revez la salida de mi condicion es distinta a la que obliga que ingrese
+    El try es para que compare si la entrada es igual a la variable
     """
     try:
         # le pido que ingrese su edad en numeros

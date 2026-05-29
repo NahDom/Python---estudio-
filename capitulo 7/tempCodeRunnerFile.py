@@ -1,30 +1,40 @@
-import pandas as pd
+print("\n===== VENTA DE ENTRADAS =====")
+print("\nIngrese las edades de los que quieren ver la pelicula.")
 
-def step1(df):
-    df.columns = df.columns.str.lower().str.replace(" ", "_")
-    df = df[df["payment_method"] == "PayPal"]
-    df = df[df["frequency_of_purchases"].isin(["Weekly", "Fortnightly", "bi-weekly"])]
-    return df
+edades = []
+total = 0
+while True:
+    #debo de actualizar la variable de la salida para que cada vez que termine la ejecucion, esto lo puedo hacer siempre con variables locales para la ejecucion del programa, al menos mientras no realize un main()
+    entrada = input("Ingrese una edad (o 'salir' para terminar el programa): ")
+    # aqui se actualiza la edad de la persona para que cuando ingrese salir salga directamente
+    if entrada.lower() == 'salir':
+        break
+    # aqui lo que ocurre es que obligo a que salga CUANDO SEA SALIR no al revez como cuando lo pongo como una condicion booleana aparte
+    """ 
+    Debo de tener cuidado mucho cuidado cuando sea un ingreso invertido, si yo tengo que la entrada es DISTINTA A LO QUE DEBE HACER SALIR estare saliendo de la ejecucion eternamente.
+    siempre debe ser un Si condicion = salida Entonces Fin, porque al hacerlo al revez la salida de mi condicion es distinta a la que obliga que ingrese
+    """
+    try:
+        # le pido que ingrese su edad en numeros
+        # le asigno a la variable edad la entrada para que sea convertida a numerico
+        edad = int(entrada)
+        edades.append(edad) # añado las edades a una lista de edades
+        if edad == 3:
+            print(f"\n Entrada de menor de {edad} su ingreso es gratuito")
+        elif edad > 3 and edad < 12:
+            print(f"\nMenor de 12, tiene {edad}, paga 8 dolares")
+            total += 8
+        elif edad >= 12:
+            print(f"\nMayor de 12 años, edad: {edad} , debe de pagar 12 dolares")
+            total += 12
+    except ValueError: # para evitar ingresos invalidos solo numeros no caracteres en este punto
+        print("\n¡Porfavor, ingrese solamente la edad en numeros!")
 
-def step2(df):
-    df = df[["customer_id", "category", "purchase_amount_(usd)"]].groupby(["customer_id", "category"]).sum().reset_index()
-    df["rank"] = df.groupby("category")["purchase_amount_(usd)"].rank(method="dense", ascending=False)
-    df = df[df["rank"] == 1]
-    return df
-
-def step3(df):
-    values = df[["customer_id", "category"]].to_dict()
-    customers = [x for x in values["customer_id"].values()]
-    categories = [x for x in values["category"].values()]
-    result = list(zip(customers, categories))
-
-    return result
-
-def step4(result):
-    with open("result.txt", "w") as f:
-        for customer_id, category in result:
-            f.write(f"{customer_id}, {category}\n")
-
-
-df = pd.read_csv("data/csv/shopping_behavior_2023.csv")
-step4(step3(step2(step1(df))))
+# por si quiero mostrar las edades que fueron ingresadas al final
+if edades:
+    print(f"La cantidad de personas fueron: {len(edades)} personas, de: " + ", ".join(map(str,edades))) 
+    #convierto los elementos de la lista para que se muestren como string 
+    # porque no hay una forma logica de momento que me ayude a mostrar la lista separa por comas  
+    print(f"\nTotal a pagar $ {total}")
+else:
+    print("\nNo hay edades ingresadas")

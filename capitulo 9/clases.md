@@ -40,3 +40,11 @@ class Dispositivo:
              mensaje += 'Estado: apagado'
         return mensaje
 ```
+
+ejemplos de manera de utilizar el scope de los metodos en las clases
+
+![alt text](image.png)
+    
+otra forma mas limpia de verlo
+
+![alt text](image-1.png)
